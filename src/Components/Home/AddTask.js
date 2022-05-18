@@ -7,7 +7,7 @@ const AddTask = ({refetch}) => {
           name: data.name,
           task:data.textarea
       }
-      fetch('http://localhost:5000/task', {
+      fetch('https://limitless-taiga-02244.herokuapp.com/task', {
           method: "POST",
           headers: {
             'Content-Type': 'application/json'

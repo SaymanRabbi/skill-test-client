@@ -14,7 +14,7 @@ const Task = ({ taskdata, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
               if (result.isConfirmed) {
-                fetch(`http://localhost:5000/task?id=${id}`, {
+                fetch(`https://limitless-taiga-02244.herokuapp.com/task?id=${id}`, {
                     method:"DELETE"
                 }).then(res=>res.json()).then(data=>refetch())
               Swal.fire(
@@ -26,7 +26,7 @@ const Task = ({ taskdata, refetch }) => {
           })
     }
     const update = (id) => {
-             fetch(`http://localhost:5000/task?id=${id}`, {
+             fetch(`https://limitless-taiga-02244.herokuapp.com/task?id=${id}`, {
                     method:"PUT"
              }).then(res => res.json()).then(data =>
                 refetch())

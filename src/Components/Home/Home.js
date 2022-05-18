@@ -4,7 +4,7 @@ import AddTask from './AddTask';
 import Alltasks from './Alltasks';
 
 const Home = () => {
-    const { data: tasks, isLoading,refetch } = useQuery('task', () => fetch('http://localhost:5000/task').then(res => res.json()));
+    const { data: tasks, isLoading,refetch } = useQuery('task', () => fetch('https://limitless-taiga-02244.herokuapp.com/task').then(res => res.json()));
     if (isLoading) {
         return;
     }
