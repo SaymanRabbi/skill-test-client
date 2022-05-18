@@ -11,8 +11,8 @@ import { toast } from 'react-toastify';
 const Login = () => {
     const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const [signInWithGoogle, gUser] = useSignInWithGoogle(auth);
-    const [signInWithEmailAndPassword, user, ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithGoogle, gUser,,gerror] = useSignInWithGoogle(auth);
+    const [signInWithEmailAndPassword, user, ,error] = useSignInWithEmailAndPassword(auth);
     useState(() => {
         if (gUser || user) {
             navigate('/')
@@ -22,7 +22,10 @@ const Login = () => {
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email,data.password)
     };
-    
+    let showerror
+    if (error || gerror) {
+        showerror = <p className='text-red-500'>{error?.message||gerror?.message}</p>
+    }
     return (
 <div className='flex justify-center items-center h-screen'>
 <div className="card w-96 bg-base-100 shadow-xl">
@@ -82,7 +85,10 @@ const Login = () => {
         
             </label>
             
-        </div>
+                        </div>
+                        {
+                            showerror
+                        }
         <input type="submit" className="btn w-full max-w-xs" />
         <p className='mt-2'>New to Task Manger?<Link to='/register' className=' text-secondary'>Create new account</Link></p>
 </form>
