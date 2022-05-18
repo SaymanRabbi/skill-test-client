@@ -29,8 +29,9 @@ const Task = ({ taskdata, refetch }) => {
              fetch(`http://localhost:5000/task?id=${id}`, {
                     method:"PUT"
              }).then(res => res.json()).then(data =>
-                 toast.success('task completed Successfully'),
-                 refetch())
+                refetch())
+                 toast.success('task completed Successfully')
+                
     }
     return (
         <div class="card w-96 bg-base-100 shadow-xl mx-auto">
