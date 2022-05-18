@@ -10,9 +10,9 @@ const Navbar = () => {
     signOut(auth);
   } 
     return (
-        <div class="navbar flex bg-base-100 px-12">
+        <div className="navbar flex bg-base-100 px-12">
           <div>
-          <Link to='/' class="btn btn-ghost normal-case text-2xl">Task Manager</Link>
+          <Link to='/' className="btn btn-ghost normal-case text-2xl">Task Manager</Link>
             </div>
             <div>
                 <NavLink to='/' className='text-xl'>Home</NavLink>

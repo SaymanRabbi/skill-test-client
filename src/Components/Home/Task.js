@@ -34,13 +34,13 @@ const Task = ({ taskdata, refetch }) => {
                 
     }
     return (
-        <div class="card w-96 bg-base-100 shadow-xl mx-auto">
-        <div class="card-body">
+        <div className="card w-96 bg-base-100 shadow-xl mx-auto">
+        <div className="card-body">
                 <h2 className={`card-title ${role==='update'&& 'line-through'}`}>{name}</h2>
                 <p className={`${role==='update'&& 'line-through'}`}>{task}</p>
-          <div class="card-actions">
-            <button class="btn btn-primary" disabled={role==='update'} onClick={()=>update(taskdata._id)}>Complete</button>
-            <button class="btn btn-primary" onClick={()=>deleteTask(taskdata._id)}>Delete</button>
+          <div className="card-actions">
+            <button className="btn btn-primary" disabled={role==='update'} onClick={()=>update(taskdata._id)}>Complete</button>
+            <button className="btn btn-primary" onClick={()=>deleteTask(taskdata._id)}>Delete</button>
           </div>
         </div>
       </div>
