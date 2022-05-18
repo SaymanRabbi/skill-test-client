@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
     const navigate = useNavigate()
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const [signInWithGoogle, gUser] = useSignInWithGoogle(auth);
     const [signInWithEmailAndPassword, user, ] = useSignInWithEmailAndPassword(auth);
     useState(() => {
