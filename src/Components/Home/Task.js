@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import Swal from 'sweetalert2'
 const Task = ({ taskdata, refetch }) => {
     const { name, task,role } = taskdata
@@ -27,7 +28,9 @@ const Task = ({ taskdata, refetch }) => {
     const update = (id) => {
              fetch(`http://localhost:5000/task?id=${id}`, {
                     method:"PUT"
-                }).then(res=>res.json()).then(data=>refetch())
+             }).then(res => res.json()).then(data =>
+                 toast.success('task completed Successfully'),
+                 refetch())
     }
     return (
         <div class="card w-96 bg-base-100 shadow-xl mx-auto">

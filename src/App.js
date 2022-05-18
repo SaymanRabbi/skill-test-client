@@ -4,6 +4,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
 import Register from './Components/Register/Register';
+import { ToastContainer} from 'react-toastify';
 function App() {
   return (
     <div style={{ minHeight: '100vh', background: '#3D4451' }}>
@@ -13,6 +14,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
