@@ -9,7 +9,7 @@ const Home = () => {
         return;
     }
     return (
-        <div>
+        <div >
             <AddTask refetch={refetch}></AddTask>
             <Alltasks tasks={tasks} isLoading={isLoading} refetch={refetch}></Alltasks>
         </div>

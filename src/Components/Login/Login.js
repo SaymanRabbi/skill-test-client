@@ -27,7 +27,7 @@ const Login = () => {
         showerror = <p className='text-red-500'>{error?.message||gerror?.message}</p>
     }
     return (
-<div className='flex justify-center items-center h-screen'>
+<div className='flex justify-center items-center h-screen' >
 <div className="card w-96 bg-base-100 shadow-xl">
 <div className="card-body">
     <h2 className="text-center text-secondary font-bold text-2xl">Login</h2>
